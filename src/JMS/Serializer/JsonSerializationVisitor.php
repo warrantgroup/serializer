@@ -32,7 +32,7 @@ class JsonSerializationVisitor extends GenericSerializationVisitor
             $root = $root->getArrayCopy();
         }
         
-        $result = @json_encode($this->getRoot(), $this->options);
+        $result = @json_encode($root, $this->options);
 
         switch (json_last_error()) {
             case JSON_ERROR_NONE:
